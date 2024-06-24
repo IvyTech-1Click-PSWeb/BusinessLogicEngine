@@ -1,0 +1,3148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetFFValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ffID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFFValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFFValuesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppControls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="geoID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="wcID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="clientID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppControlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppControlsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartReq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GEO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actionCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asmCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartReqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartReqResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnitIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:IdentificatorTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="IdentificatorTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="BCN" />
+          <s:enumeration value="SerialNumber" />
+          <s:enumeration value="FixedAssetTag" />
+          <s:enumeration value="ITEM_BCN" />
+          <s:enumeration value="SERIAL_NO" />
+          <s:enumeration value="FIX_ASSET_TAG" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetUnitInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsTechReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RidNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsTechReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsTechReturnResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBCN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultCodesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextWorkCenter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRouteId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWorkCenterId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResultCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextWorkCenterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNextWorkCenterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefectCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDefectInfo" type="tns:GetDefectInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetDefectInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeographyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderProcessType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkCenterName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDefectCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefectCodesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCosmeticDefectOpen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCosmeticDefectOpenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsCosmeticDefectOpenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitInfoNonWO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnitIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:IdentificatorTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitInfoNonWOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitInfoNonWOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnitIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:IdentificatorTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFFByWC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clientId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contrID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="wcID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFFByWCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFFByWCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutComeCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="outComeCodeType" type="tns:SystemOutComeCodeTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SystemOutComeCodeTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="DIA" />
+          <s:enumeration value="SYM" />
+          <s:enumeration value="FLR" />
+          <s:enumeration value="RPR" />
+          <s:enumeration value="RES" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetOutComeCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOutComeCodesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssemblyCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssemblyCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssemblyCodesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateAssemblyCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedAssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateAssemblyCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateAssemblyCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefectCodeByAssembly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedAssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefectCodeByAssemblyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefectCodeByAssemblyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateDefectCodeByAssembly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedAssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedDefectCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateDefectCodeByAssemblyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateDefectCodeByAssemblyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefectCodes4WC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefectCodes4WCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefectCodes4WCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateDefectCodes4WC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedDefectCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateDefectCodes4WCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateDefectCodes4WCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActionByDefect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="geoName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="defCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActionByDefectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActionByDefectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateActionByDefect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="geoName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="defCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="actCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateActionByDefectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateActionByDefectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selectedActionCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultByActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByDefect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="selectedDefectID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultByDefectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultByDefectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetECOByPart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetECOByPartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetECOByPartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSerialECO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecoCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ecoClose" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSerialECOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertSerialECOResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSNHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSNHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSNHistoryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkCenterByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkCenterByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkCenterByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoutesByWC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="workcenterName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoutesByWCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoutesByWCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitFAInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitFAInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitFAInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompByAssemblyByAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompByAssemblyByActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompByAssemblyByActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastWorkCenter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastWorkCenterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastWorkCenterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="defectCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBOMResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMByDefectAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="defectCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="actionCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMByDefectActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBOMByDefectActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoNonWOHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnitIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:IdentificatorTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="Span" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoNonWOHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoNonWOHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateTimeoutByWC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ItemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Workcenter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateTimeoutByWCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateTimeoutByWCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ClientId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ContractId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WorkcenterId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HostName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateConfigurationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitInfoNonWOXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnitIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:IdentificatorTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitInfoNonWOXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnitInfoNonWOXMLResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userLogin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInformationResult" type="tns:UserInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserLogin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DefaultLocationId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultLocationName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Codes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="item_pn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="value_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CodesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFAFFValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodeIn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFAFFValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFAFFValuesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompFAFFValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DefCodeValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActCodeValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodeValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompFAFFValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompFAFFValuesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemInfoByXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlLoad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemInfoByXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemInfoByXMLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePartNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidatePartNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidatePartNumbersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartReqByItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActionCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartReqByItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartReqByItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCascadingBOM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WorkCenterId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="partNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssemblyCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="defectCodeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActionCodeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UseOwnerCond" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OwnerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConditionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCascadingBOMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCascadingBOMResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LocationId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="WorkCenterId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BOMId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="partId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="KITBOMId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AltPartId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AltPartPKId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompFAFFValuesV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOMValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodeValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCompFAFFValuesV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompFAFFValuesV2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlternatePartMain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContractId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PartId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OwnerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConditionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StLocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOMId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlternatePartMainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlternatePartMainResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReqTemplateInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ClientId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContractId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderProcessTypeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkCenterId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReqTemplateInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReqTemplateInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartNoDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParentPartId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OwnerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConditionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WarehouseId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StLocationId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BinId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOMId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KITBOMId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartNoDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartNoDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartNoDetails2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPartNoDetails2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPartNoDetails2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCNBySNPN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBCNBySNPNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBCNBySNPNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMNoDefectAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="itemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssemblyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ActionCodeID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMNoDefectActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBOMNoDefectActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDefectActionTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PartId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DefectCodeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ActionCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDefectActionTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDefectActionTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAltPartDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentPartId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AltPartId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAltPartDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAltPartDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchingCOMPASSYBYACT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="routeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="asmCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="compPartNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMatchingCOMPASSYBYACTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMatchingCOMPASSYBYACTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMRemByDefectAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="defectCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assemblyName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="actionCodeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBOMRemByDefectActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBOMRemByDefectActionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNonBOMInvByPart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNonBOMInvByPartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNonBOMInvByPartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwnersCondition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="issueremoveind" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOwnersConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOwnersConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFFValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFFValues" />
+  </wsdl:message>
+  <wsdl:message name="GetFFValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFFValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppControlsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppControls" />
+  </wsdl:message>
+  <wsdl:message name="GetAppControlsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppControlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartReqSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartReq" />
+  </wsdl:message>
+  <wsdl:message name="GetPartReqSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsTechReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:IsTechReturn" />
+  </wsdl:message>
+  <wsdl:message name="IsTechReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:IsTechReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetResultCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNextWorkCenterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNextWorkCenter" />
+  </wsdl:message>
+  <wsdl:message name="GetNextWorkCenterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNextWorkCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefectCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefectCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCosmeticDefectOpenSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCosmeticDefectOpen" />
+  </wsdl:message>
+  <wsdl:message name="IsCosmeticDefectOpenSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCosmeticDefectOpenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoNonWOSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitInfoNonWO" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoNonWOSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitInfoNonWOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitCount" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFFByWCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFFByWC" />
+  </wsdl:message>
+  <wsdl:message name="GetFFByWCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFFByWCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOutComeCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOutComeCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetOutComeCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOutComeCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssemblyCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssemblyCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetAssemblyCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssemblyCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateAssemblyCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateAssemblyCode" />
+  </wsdl:message>
+  <wsdl:message name="ValidateAssemblyCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateAssemblyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodeByAssemblySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefectCodeByAssembly" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodeByAssemblySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefectCodeByAssemblyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateDefectCodeByAssemblySoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateDefectCodeByAssembly" />
+  </wsdl:message>
+  <wsdl:message name="ValidateDefectCodeByAssemblySoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateDefectCodeByAssemblyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodes4WCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefectCodes4WC" />
+  </wsdl:message>
+  <wsdl:message name="GetDefectCodes4WCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefectCodes4WCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateDefectCodes4WCSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateDefectCodes4WC" />
+  </wsdl:message>
+  <wsdl:message name="ValidateDefectCodes4WCSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateDefectCodes4WCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActionByDefectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActionByDefect" />
+  </wsdl:message>
+  <wsdl:message name="GetActionByDefectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActionByDefectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateActionByDefectSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateActionByDefect" />
+  </wsdl:message>
+  <wsdl:message name="ValidateActionByDefectSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateActionByDefectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByActionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultByAction" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByActionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultByActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByDefectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultByDefect" />
+  </wsdl:message>
+  <wsdl:message name="GetResultByDefectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultByDefectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetECOByPartSoapIn">
+    <wsdl:part name="parameters" element="tns:GetECOByPart" />
+  </wsdl:message>
+  <wsdl:message name="GetECOByPartSoapOut">
+    <wsdl:part name="parameters" element="tns:GetECOByPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSerialECOSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSerialECO" />
+  </wsdl:message>
+  <wsdl:message name="InsertSerialECOSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSerialECOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSNHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetSNHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetSNHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetSNHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkCenterByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkCenterByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkCenterByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkCenterByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutesByWCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoutesByWC" />
+  </wsdl:message>
+  <wsdl:message name="GetRoutesByWCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoutesByWCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitFAInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitFAInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitFAInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitFAInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompByAssemblyByActionSoapIn">
+    <wsdl:part name="parameters" element="tns:CompByAssemblyByAction" />
+  </wsdl:message>
+  <wsdl:message name="CompByAssemblyByActionSoapOut">
+    <wsdl:part name="parameters" element="tns:CompByAssemblyByActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastWorkCenterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastWorkCenter" />
+  </wsdl:message>
+  <wsdl:message name="GetLastWorkCenterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastWorkCenterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBOM" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMByDefectActionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBOMByDefectAction" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMByDefectActionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBOMByDefectActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoNonWOHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoNonWOHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoNonWOHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoNonWOHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTimeoutByWCSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateTimeoutByWC" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTimeoutByWCSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateTimeoutByWCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="ValidateConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoNonWOXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitInfoNonWOXML" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitInfoNonWOXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitInfoNonWOXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CodesSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Codes" />
+  </wsdl:message>
+  <wsdl:message name="Get_CodesSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFAFFValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFAFFValues" />
+  </wsdl:message>
+  <wsdl:message name="GetFAFFValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFAFFValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompFAFFValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompFAFFValues" />
+  </wsdl:message>
+  <wsdl:message name="GetCompFAFFValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompFAFFValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemInfoByXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemInfoByXML" />
+  </wsdl:message>
+  <wsdl:message name="GetItemInfoByXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemInfoByXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePartNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidatePartNumbers" />
+  </wsdl:message>
+  <wsdl:message name="ValidatePartNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidatePartNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartReqByItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartReqByItem" />
+  </wsdl:message>
+  <wsdl:message name="GetPartReqByItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartReqByItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCascadingBOMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCascadingBOM" />
+  </wsdl:message>
+  <wsdl:message name="GetCascadingBOMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCascadingBOMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPartInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompFAFFValuesV2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompFAFFValuesV2" />
+  </wsdl:message>
+  <wsdl:message name="GetCompFAFFValuesV2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompFAFFValuesV2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetAlternatePartMainSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlternatePartMain" />
+  </wsdl:message>
+  <wsdl:message name="GetAlternatePartMainSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlternatePartMainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReqTemplateInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReqTemplateInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReqTemplateInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReqTemplateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartNoDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartNoDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPartNoDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartNoDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPartNoDetails2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetPartNoDetails2" />
+  </wsdl:message>
+  <wsdl:message name="GetPartNoDetails2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetPartNoDetails2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetBCNBySNPNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBCNBySNPN" />
+  </wsdl:message>
+  <wsdl:message name="GetBCNBySNPNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBCNBySNPNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMNoDefectActionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBOMNoDefectAction" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMNoDefectActionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBOMNoDefectActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDefectActionTableSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDefectActionTable" />
+  </wsdl:message>
+  <wsdl:message name="CheckDefectActionTableSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDefectActionTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAltPartDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAltPartDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAltPartDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAltPartDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchingCOMPASSYBYACTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMatchingCOMPASSYBYACT" />
+  </wsdl:message>
+  <wsdl:message name="GetMatchingCOMPASSYBYACTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMatchingCOMPASSYBYACTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMRemByDefectActionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBOMRemByDefectAction" />
+  </wsdl:message>
+  <wsdl:message name="GetBOMRemByDefectActionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBOMRemByDefectActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNonBOMInvByPartSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNonBOMInvByPart" />
+  </wsdl:message>
+  <wsdl:message name="GetNonBOMInvByPartSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNonBOMInvByPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnersConditionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOwnersCondition" />
+  </wsdl:message>
+  <wsdl:message name="GetOwnersConditionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOwnersConditionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QueryAdapterWrapperSoap">
+    <wsdl:operation name="GetFFValues">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get FlexField Values at WorkCenterLevel</wsdl:documentation>
+      <wsdl:input message="tns:GetFFValuesSoapIn" />
+      <wsdl:output message="tns:GetFFValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppControls">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Application Controls &amp; Display Order</wsdl:documentation>
+      <wsdl:input message="tns:GetAppControlsSoapIn" />
+      <wsdl:output message="tns:GetAppControlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReq">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Part Indicators</wsdl:documentation>
+      <wsdl:input message="tns:GetPartReqSoapIn" />
+      <wsdl:output message="tns:GetPartReqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Current Information for a specific unit, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetUnitInfoSoapIn" />
+      <wsdl:output message="tns:GetUnitInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsTechReturn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check the given Rid Number for Tech Return</wsdl:documentation>
+      <wsdl:input message="tns:IsTechReturnSoapIn" />
+      <wsdl:output message="tns:IsTechReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Result Code for the specified Unit depending on the WC where is located</wsdl:documentation>
+      <wsdl:input message="tns:GetResultCodesSoapIn" />
+      <wsdl:output message="tns:GetResultCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextWorkCenter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the next workcenter based on WC Id, Route Id and Result Code provided</wsdl:documentation>
+      <wsdl:input message="tns:GetNextWorkCenterSoapIn" />
+      <wsdl:output message="tns:GetNextWorkCenterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Defect Codes List for the specified Result Code</wsdl:documentation>
+      <wsdl:input message="tns:GetDefectCodesSoapIn" />
+      <wsdl:output message="tns:GetDefectCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCosmeticDefectOpen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return a DataSet with the open defect codes, NULL if none is found</wsdl:documentation>
+      <wsdl:input message="tns:IsCosmeticDefectOpenSoapIn" />
+      <wsdl:output message="tns:IsCosmeticDefectOpenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Current Information for a specific unit, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetUnitInfoNonWOSoapIn" />
+      <wsdl:output message="tns:GetUnitInfoNonWOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Count of active Units by SN BCN or fixed asset tag, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetUnitCountSoapIn" />
+      <wsdl:output message="tns:GetUnitCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFFByWC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Flex Fields for the workcenter information provided, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetFFByWCSoapIn" />
+      <wsdl:output message="tns:GetFFByWCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutComeCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Specified Out Code Code for the current workcenter of the unit, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetOutComeCodesSoapIn" />
+      <wsdl:output message="tns:GetOutComeCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssemblyCodes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Assembly Codes assigned for the current workcenter, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetAssemblyCodesSoapIn" />
+      <wsdl:output message="tns:GetAssemblyCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAssemblyCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate the given Assembly Code against the assigned codes assigned for the current workcenter, Return 'SUCCESS' if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:ValidateAssemblyCodeSoapIn" />
+      <wsdl:output message="tns:ValidateAssemblyCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodeByAssembly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Defect Codes List that is pre-defined on the VALIDATE_DEFECT_BY_ASSEMBLY table, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetDefectCodeByAssemblySoapIn" />
+      <wsdl:output message="tns:GetDefectCodeByAssemblySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodeByAssembly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate the Defect Code against the pre-defined list on the VALIDATE_DEFECT_BY_ASSEMBLY table, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:ValidateDefectCodeByAssemblySoapIn" />
+      <wsdl:output message="tns:ValidateDefectCodeByAssemblySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes4WC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Defect Codes Assigned to the current workcenter, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetDefectCodes4WCSoapIn" />
+      <wsdl:output message="tns:GetDefectCodes4WCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodes4WC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate the Defect Codes againts the defect code list assigned to the current workcenter, Return 'SUCCESS' if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:ValidateDefectCodes4WCSoapIn" />
+      <wsdl:output message="tns:ValidateDefectCodes4WCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionByDefect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Actions Codes List that is pre-defined on the VALDIDATE_ACTION_BY_DEFECT table, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetActionByDefectSoapIn" />
+      <wsdl:output message="tns:GetActionByDefectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActionByDefect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate the Actions Code againts the pre-defined list on the VALDIDATE_ACTION_BY_DEFECT table, Return 'SUCCESS' if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:ValidateActionByDefectSoapIn" />
+      <wsdl:output message="tns:ValidateActionByDefectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Result Code List that is pre-defined on the VALIDATE_RESULT_BY_ACTION table, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetResultByActionSoapIn" />
+      <wsdl:output message="tns:GetResultByActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByDefect">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Result Code List that is pre-defined on the VALIDATE_RESULT_BY_DEFECT table, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetResultByDefectSoapIn" />
+      <wsdl:output message="tns:GetResultByDefectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetECOByPart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the ECO acording to the Part Number the user provide, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetECOByPartSoapIn" />
+      <wsdl:output message="tns:GetECOByPartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSerialECO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Insert a valid Records on the CLIENT_ECO_SN_HISTORY table</wsdl:documentation>
+      <wsdl:input message="tns:InsertSerialECOSoapIn" />
+      <wsdl:output message="tns:InsertSerialECOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSNHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the maximum Status on the ECO SN History table</wsdl:documentation>
+      <wsdl:input message="tns:GetSNHistorySoapIn" />
+      <wsdl:output message="tns:GetSNHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkCenterByUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the WorkCenter and privileges associated with the UserName</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkCenterByUserSoapIn" />
+      <wsdl:output message="tns:GetWorkCenterByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutesByWC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the routes by WorkCenter</wsdl:documentation>
+      <wsdl:input message="tns:GetRoutesByWCSoapIn" />
+      <wsdl:output message="tns:GetRoutesByWCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitFAInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all the FA information related to the unit</wsdl:documentation>
+      <wsdl:input message="tns:GetUnitFAInfoSoapIn" />
+      <wsdl:output message="tns:GetUnitFAInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompByAssemblyByAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the rules to Add or Remove related to the Assembly Code</wsdl:documentation>
+      <wsdl:input message="tns:CompByAssemblyByActionSoapIn" />
+      <wsdl:output message="tns:CompByAssemblyByActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastWorkCenter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the last workCenter where the unit was Time Out</wsdl:documentation>
+      <wsdl:input message="tns:GetLastWorkCenterSoapIn" />
+      <wsdl:output message="tns:GetLastWorkCenterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the rules to Add or Remove related to the Assembly Code</wsdl:documentation>
+      <wsdl:input message="tns:GetBOMSoapIn" />
+      <wsdl:output message="tns:GetBOMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMByDefectAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the rules to Add or Remove related to the Assembly Code</wsdl:documentation>
+      <wsdl:input message="tns:GetBOMByDefectActionSoapIn" />
+      <wsdl:output message="tns:GetBOMByDefectActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoNonWOHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Information for a specific unit based on span , Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetInfoNonWOHistorySoapIn" />
+      <wsdl:output message="tns:GetInfoNonWOHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTimeoutByWC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determinate if a unit is already Timed Out from a specific WC, if yes then it will return the result code of that time out </wsdl:documentation>
+      <wsdl:input message="tns:ValidateTimeoutByWCSoapIn" />
+      <wsdl:output message="tns:ValidateTimeoutByWCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateConfiguration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Function for Validating Label Print and CAM PROCESS Configuration</wsdl:documentation>
+      <wsdl:input message="tns:ValidateConfigurationSoapIn" />
+      <wsdl:output message="tns:ValidateConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWOXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Current Information for a specific unit, Return DS if all is OK, Nothing if something fail</wsdl:documentation>
+      <wsdl:input message="tns:GetUnitInfoNonWOXMLSoapIn" />
+      <wsdl:output message="tns:GetUnitInfoNonWOXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the information for a given user, including first and last name, e-mail, default location, etc.</wsdl:documentation>
+      <wsdl:input message="tns:GetUserInformationSoapIn" />
+      <wsdl:output message="tns:GetUserInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Codes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determinate if a unit is already Timed Out from a specific WC, if yes then it will return the result code of that time out </wsdl:documentation>
+      <wsdl:input message="tns:Get_CodesSoapIn" />
+      <wsdl:output message="tns:Get_CodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFAFFValues">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Determinate if a unit is already Timed Out from a specific WC, if yes then it will return the result code of that time out </wsdl:documentation>
+      <wsdl:input message="tns:GetFAFFValuesSoapIn" />
+      <wsdl:output message="tns:GetFAFFValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValues">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the component flex field values in the component one click application </wsdl:documentation>
+      <wsdl:input message="tns:GetCompFAFFValuesSoapIn" />
+      <wsdl:output message="tns:GetCompFAFFValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfoByXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetItemInfoByXML</wsdl:documentation>
+      <wsdl:input message="tns:GetItemInfoByXMLSoapIn" />
+      <wsdl:output message="tns:GetItemInfoByXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePartNumbers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Receive a list of PN PIPE delimited and check if those are valid, if all of them are valid [SUCCESS] will be returned otherwise will be the list of invalid PN</wsdl:documentation>
+      <wsdl:input message="tns:ValidatePartNumbersSoapIn" />
+      <wsdl:output message="tns:ValidatePartNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReqByItem">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Latest Requisition created for the specified itemID</wsdl:documentation>
+      <wsdl:input message="tns:GetPartReqByItemSoapIn" />
+      <wsdl:output message="tns:GetPartReqByItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCascadingBOM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the list of BOM/Component depending on the INPUT parameters</wsdl:documentation>
+      <wsdl:input message="tns:GetCascadingBOMSoapIn" />
+      <wsdl:output message="tns:GetCascadingBOMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Part Information (Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetPartInfoSoapIn" />
+      <wsdl:output message="tns:GetPartInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValuesV2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the list Flex Field for a component (Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetCompFAFFValuesV2SoapIn" />
+      <wsdl:output message="tns:GetCompFAFFValuesV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlternatePartMain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the closest match for the Alternate part (Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetAlternatePartMainSoapIn" />
+      <wsdl:output message="tns:GetAlternatePartMainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReqTemplateInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Requisition Template Information (Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetReqTemplateInfoSoapIn" />
+      <wsdl:output message="tns:GetReqTemplateInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get inventory part details (QOH, MaxQty, Inv_Ind)-(Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetPartNoDetailsSoapIn" />
+      <wsdl:output message="tns:GetPartNoDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get part details (Mainly used for PartReq screen)-(Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetPartNoDetails2SoapIn" />
+      <wsdl:output message="tns:GetPartNoDetails2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCNBySNPN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get BCN of a unit based on the Serial and Part provided</wsdl:documentation>
+      <wsdl:input message="tns:GetBCNBySNPNSoapIn" />
+      <wsdl:output message="tns:GetBCNBySNPNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMNoDefectAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the list of BOM/Component depending on the INPUT parameters WITHOUT looking into the DEFECTACTION table</wsdl:documentation>
+      <wsdl:input message="tns:GetBOMNoDefectActionSoapIn" />
+      <wsdl:output message="tns:GetBOMNoDefectActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDefectActionTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check if a valid Defect/ACtion combination exists on the DefectAction table</wsdl:documentation>
+      <wsdl:input message="tns:CheckDefectActionTableSoapIn" />
+      <wsdl:output message="tns:CheckDefectActionTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAltPartDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Owner, Condition, QOH information for the alternate part provided</wsdl:documentation>
+      <wsdl:input message="tns:GetAltPartDetailsSoapIn" />
+      <wsdl:output message="tns:GetAltPartDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchingCOMPASSYBYACT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the most exact match from the VAL_COMP_ASSY_ACTION table -(Cascading BOM Implementation)</wsdl:documentation>
+      <wsdl:input message="tns:GetMatchingCOMPASSYBYACTSoapIn" />
+      <wsdl:output message="tns:GetMatchingCOMPASSYBYACTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMRemByDefectAction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the rules to Remove part based on the values sent by remove part application</wsdl:documentation>
+      <wsdl:input message="tns:GetBOMRemByDefectActionSoapIn" />
+      <wsdl:output message="tns:GetBOMRemByDefectActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonBOMInvByPart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the data for non bom inv parts</wsdl:documentation>
+      <wsdl:input message="tns:GetNonBOMInvByPartSoapIn" />
+      <wsdl:output message="tns:GetNonBOMInvByPartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnersCondition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get owners and conditions from validate_owner_condition table</wsdl:documentation>
+      <wsdl:input message="tns:GetOwnersConditionSoapIn" />
+      <wsdl:output message="tns:GetOwnersConditionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryAdapterWrapperSoap" type="tns:QueryAdapterWrapperSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFFValues">
+      <soap:operation soapAction="http://tempuri.org/GetFFValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppControls">
+      <soap:operation soapAction="http://tempuri.org/GetAppControls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReq">
+      <soap:operation soapAction="http://tempuri.org/GetPartReq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUnitInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsTechReturn">
+      <soap:operation soapAction="http://tempuri.org/IsTechReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultCodes">
+      <soap:operation soapAction="http://tempuri.org/GetResultCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextWorkCenter">
+      <soap:operation soapAction="http://tempuri.org/GetNextWorkCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes">
+      <soap:operation soapAction="http://tempuri.org/GetDefectCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCosmeticDefectOpen">
+      <soap:operation soapAction="http://tempuri.org/IsCosmeticDefectOpen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWO">
+      <soap:operation soapAction="http://tempuri.org/GetUnitInfoNonWO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitCount">
+      <soap:operation soapAction="http://tempuri.org/GetUnitCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFFByWC">
+      <soap:operation soapAction="http://tempuri.org/GetFFByWC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutComeCodes">
+      <soap:operation soapAction="http://tempuri.org/GetOutComeCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssemblyCodes">
+      <soap:operation soapAction="http://tempuri.org/GetAssemblyCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAssemblyCode">
+      <soap:operation soapAction="http://tempuri.org/ValidateAssemblyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodeByAssembly">
+      <soap:operation soapAction="http://tempuri.org/GetDefectCodeByAssembly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodeByAssembly">
+      <soap:operation soapAction="http://tempuri.org/ValidateDefectCodeByAssembly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes4WC">
+      <soap:operation soapAction="http://tempuri.org/GetDefectCodes4WC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodes4WC">
+      <soap:operation soapAction="http://tempuri.org/ValidateDefectCodes4WC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionByDefect">
+      <soap:operation soapAction="http://tempuri.org/GetActionByDefect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActionByDefect">
+      <soap:operation soapAction="http://tempuri.org/ValidateActionByDefect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByAction">
+      <soap:operation soapAction="http://tempuri.org/GetResultByAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByDefect">
+      <soap:operation soapAction="http://tempuri.org/GetResultByDefect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetECOByPart">
+      <soap:operation soapAction="http://tempuri.org/GetECOByPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSerialECO">
+      <soap:operation soapAction="http://tempuri.org/InsertSerialECO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSNHistory">
+      <soap:operation soapAction="http://tempuri.org/GetSNHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkCenterByUser">
+      <soap:operation soapAction="http://tempuri.org/GetWorkCenterByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutesByWC">
+      <soap:operation soapAction="http://tempuri.org/GetRoutesByWC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitFAInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUnitFAInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompByAssemblyByAction">
+      <soap:operation soapAction="http://tempuri.org/CompByAssemblyByAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastWorkCenter">
+      <soap:operation soapAction="http://tempuri.org/GetLastWorkCenter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOM">
+      <soap:operation soapAction="http://tempuri.org/GetBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMByDefectAction">
+      <soap:operation soapAction="http://tempuri.org/GetBOMByDefectAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoNonWOHistory">
+      <soap:operation soapAction="http://tempuri.org/GetInfoNonWOHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTimeoutByWC">
+      <soap:operation soapAction="http://tempuri.org/ValidateTimeoutByWC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateConfiguration">
+      <soap:operation soapAction="http://tempuri.org/ValidateConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWOXML">
+      <soap:operation soapAction="http://tempuri.org/GetUnitInfoNonWOXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <soap:operation soapAction="http://tempuri.org/GetUserInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Codes">
+      <soap:operation soapAction="http://tempuri.org/Get_Codes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFAFFValues">
+      <soap:operation soapAction="http://tempuri.org/GetFAFFValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValues">
+      <soap:operation soapAction="http://tempuri.org/GetCompFAFFValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfoByXML">
+      <soap:operation soapAction="http://tempuri.org/GetItemInfoByXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePartNumbers">
+      <soap:operation soapAction="http://tempuri.org/ValidatePartNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReqByItem">
+      <soap:operation soapAction="http://tempuri.org/GetPartReqByItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCascadingBOM">
+      <soap:operation soapAction="http://tempuri.org/GetCascadingBOM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPartInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValuesV2">
+      <soap:operation soapAction="http://tempuri.org/GetCompFAFFValuesV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlternatePartMain">
+      <soap:operation soapAction="http://tempuri.org/GetAlternatePartMain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReqTemplateInfo">
+      <soap:operation soapAction="http://tempuri.org/GetReqTemplateInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails">
+      <soap:operation soapAction="http://tempuri.org/GetPartNoDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails2">
+      <soap:operation soapAction="http://tempuri.org/GetPartNoDetails2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCNBySNPN">
+      <soap:operation soapAction="http://tempuri.org/GetBCNBySNPN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMNoDefectAction">
+      <soap:operation soapAction="http://tempuri.org/GetBOMNoDefectAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDefectActionTable">
+      <soap:operation soapAction="http://tempuri.org/CheckDefectActionTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAltPartDetails">
+      <soap:operation soapAction="http://tempuri.org/GetAltPartDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchingCOMPASSYBYACT">
+      <soap:operation soapAction="http://tempuri.org/GetMatchingCOMPASSYBYACT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMRemByDefectAction">
+      <soap:operation soapAction="http://tempuri.org/GetBOMRemByDefectAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonBOMInvByPart">
+      <soap:operation soapAction="http://tempuri.org/GetNonBOMInvByPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnersCondition">
+      <soap:operation soapAction="http://tempuri.org/GetOwnersCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryAdapterWrapperSoap12" type="tns:QueryAdapterWrapperSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFFValues">
+      <soap12:operation soapAction="http://tempuri.org/GetFFValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppControls">
+      <soap12:operation soapAction="http://tempuri.org/GetAppControls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReq">
+      <soap12:operation soapAction="http://tempuri.org/GetPartReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsTechReturn">
+      <soap12:operation soapAction="http://tempuri.org/IsTechReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultCodes">
+      <soap12:operation soapAction="http://tempuri.org/GetResultCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextWorkCenter">
+      <soap12:operation soapAction="http://tempuri.org/GetNextWorkCenter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes">
+      <soap12:operation soapAction="http://tempuri.org/GetDefectCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCosmeticDefectOpen">
+      <soap12:operation soapAction="http://tempuri.org/IsCosmeticDefectOpen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWO">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitInfoNonWO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitCount">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFFByWC">
+      <soap12:operation soapAction="http://tempuri.org/GetFFByWC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutComeCodes">
+      <soap12:operation soapAction="http://tempuri.org/GetOutComeCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssemblyCodes">
+      <soap12:operation soapAction="http://tempuri.org/GetAssemblyCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAssemblyCode">
+      <soap12:operation soapAction="http://tempuri.org/ValidateAssemblyCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodeByAssembly">
+      <soap12:operation soapAction="http://tempuri.org/GetDefectCodeByAssembly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodeByAssembly">
+      <soap12:operation soapAction="http://tempuri.org/ValidateDefectCodeByAssembly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefectCodes4WC">
+      <soap12:operation soapAction="http://tempuri.org/GetDefectCodes4WC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDefectCodes4WC">
+      <soap12:operation soapAction="http://tempuri.org/ValidateDefectCodes4WC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActionByDefect">
+      <soap12:operation soapAction="http://tempuri.org/GetActionByDefect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateActionByDefect">
+      <soap12:operation soapAction="http://tempuri.org/ValidateActionByDefect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByAction">
+      <soap12:operation soapAction="http://tempuri.org/GetResultByAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultByDefect">
+      <soap12:operation soapAction="http://tempuri.org/GetResultByDefect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetECOByPart">
+      <soap12:operation soapAction="http://tempuri.org/GetECOByPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSerialECO">
+      <soap12:operation soapAction="http://tempuri.org/InsertSerialECO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSNHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetSNHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkCenterByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkCenterByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoutesByWC">
+      <soap12:operation soapAction="http://tempuri.org/GetRoutesByWC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitFAInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitFAInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompByAssemblyByAction">
+      <soap12:operation soapAction="http://tempuri.org/CompByAssemblyByAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastWorkCenter">
+      <soap12:operation soapAction="http://tempuri.org/GetLastWorkCenter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOM">
+      <soap12:operation soapAction="http://tempuri.org/GetBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMByDefectAction">
+      <soap12:operation soapAction="http://tempuri.org/GetBOMByDefectAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoNonWOHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetInfoNonWOHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTimeoutByWC">
+      <soap12:operation soapAction="http://tempuri.org/ValidateTimeoutByWC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateConfiguration">
+      <soap12:operation soapAction="http://tempuri.org/ValidateConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitInfoNonWOXML">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitInfoNonWOXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInformation">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Codes">
+      <soap12:operation soapAction="http://tempuri.org/Get_Codes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFAFFValues">
+      <soap12:operation soapAction="http://tempuri.org/GetFAFFValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValues">
+      <soap12:operation soapAction="http://tempuri.org/GetCompFAFFValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfoByXML">
+      <soap12:operation soapAction="http://tempuri.org/GetItemInfoByXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePartNumbers">
+      <soap12:operation soapAction="http://tempuri.org/ValidatePartNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartReqByItem">
+      <soap12:operation soapAction="http://tempuri.org/GetPartReqByItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCascadingBOM">
+      <soap12:operation soapAction="http://tempuri.org/GetCascadingBOM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPartInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompFAFFValuesV2">
+      <soap12:operation soapAction="http://tempuri.org/GetCompFAFFValuesV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlternatePartMain">
+      <soap12:operation soapAction="http://tempuri.org/GetAlternatePartMain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReqTemplateInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetReqTemplateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetPartNoDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPartNoDetails2">
+      <soap12:operation soapAction="http://tempuri.org/GetPartNoDetails2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCNBySNPN">
+      <soap12:operation soapAction="http://tempuri.org/GetBCNBySNPN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMNoDefectAction">
+      <soap12:operation soapAction="http://tempuri.org/GetBOMNoDefectAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDefectActionTable">
+      <soap12:operation soapAction="http://tempuri.org/CheckDefectActionTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAltPartDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetAltPartDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMatchingCOMPASSYBYACT">
+      <soap12:operation soapAction="http://tempuri.org/GetMatchingCOMPASSYBYACT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBOMRemByDefectAction">
+      <soap12:operation soapAction="http://tempuri.org/GetBOMRemByDefectAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonBOMInvByPart">
+      <soap12:operation soapAction="http://tempuri.org/GetNonBOMInvByPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnersCondition">
+      <soap12:operation soapAction="http://tempuri.org/GetOwnersCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryAdapterWrapper">
+    <wsdl:port name="QueryAdapterWrapperSoap" binding="tns:QueryAdapterWrapperSoap">
+      <soap:address location="http://jgswebservicesstg/QueryAdapterWrapper.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QueryAdapterWrapperSoap12" binding="tns:QueryAdapterWrapperSoap12">
+      <soap12:address location="http://jgswebservicesstg/QueryAdapterWrapper.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

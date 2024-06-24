@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartQueue", "SmartQueue\SmartQueue.csproj", "{971FDA81-16E1-493E-B3A4-E79BE2F060A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartQueueTestFrame", "SmartQueueTestFrame\SmartQueueTestFrame.csproj", "{DBBE4C13-E0D1-4CB4-A41A-C73389F313D2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://jgsptfs01:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SmartQueue\\SmartQueue.csproj
+		SccProjectName1 = SmartQueue
+		SccLocalPath1 = SmartQueue
+		SccProjectUniqueName2 = SmartQueueTestFrame\\SmartQueueTestFrame.csproj
+		SccProjectName2 = SmartQueueTestFrame
+		SccLocalPath2 = SmartQueueTestFrame
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBE4C13-E0D1-4CB4-A41A-C73389F313D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBE4C13-E0D1-4CB4-A41A-C73389F313D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBE4C13-E0D1-4CB4-A41A-C73389F313D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBE4C13-E0D1-4CB4-A41A-C73389F313D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

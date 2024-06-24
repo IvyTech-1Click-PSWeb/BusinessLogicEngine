@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertCamId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="camId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="box" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pack" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cage" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCamIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCamIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCamId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="camId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCamIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCamIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCamId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Cage" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCamIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportCamIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCamIdANDSerial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="camId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCamIdANDSerialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCamIdANDSerialResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CamIdHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ScanType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Geo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SN_CAMID_No" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CamIdHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CamIdHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLocationNameByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLocationNameByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLocationNameByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTypeOfCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CamId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTypeOfCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTypeOfCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValCamExceptvsModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="camId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValCamExceptvsModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValCamExceptvsModelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertCamIdSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCamId" />
+  </wsdl:message>
+  <wsdl:message name="InsertCamIdSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCamIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCamIdSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCamId" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCamIdSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCamIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportCamIdSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportCamId" />
+  </wsdl:message>
+  <wsdl:message name="ReportCamIdSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportCamIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCamIdANDSerialSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCamIdANDSerial" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCamIdANDSerialSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCamIdANDSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="CamIdHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:CamIdHistory" />
+  </wsdl:message>
+  <wsdl:message name="CamIdHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:CamIdHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationNameByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLocationNameByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationNameByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLocationNameByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTypeOfCardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTypeOfCard" />
+  </wsdl:message>
+  <wsdl:message name="GetTypeOfCardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTypeOfCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValCamExceptvsModelSoapIn">
+    <wsdl:part name="parameters" element="tns:ValCamExceptvsModel" />
+  </wsdl:message>
+  <wsdl:message name="ValCamExceptvsModelSoapOut">
+    <wsdl:part name="parameters" element="tns:ValCamExceptvsModelResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CamIdValidationServiceSoap">
+    <wsdl:operation name="InsertCamId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Inserting CAM ID in CAM_PROCESS Table </wsdl:documentation>
+      <wsdl:input message="tns:InsertCamIdSoapIn" />
+      <wsdl:output message="tns:InsertCamIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updating CAM ID in CAM_PROCESS Table </wsdl:documentation>
+      <wsdl:input message="tns:UpdateCamIdSoapIn" />
+      <wsdl:output message="tns:UpdateCamIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportCamId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CAM ID Report</wsdl:documentation>
+      <wsdl:input message="tns:ReportCamIdSoapIn" />
+      <wsdl:output message="tns:ReportCamIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamIdANDSerial">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updating CAM ID and Serial in CAM_PROCESS Table </wsdl:documentation>
+      <wsdl:input message="tns:UpdateCamIdANDSerialSoapIn" />
+      <wsdl:output message="tns:UpdateCamIdANDSerialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CamIdHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CAM ID History Report</wsdl:documentation>
+      <wsdl:input message="tns:CamIdHistorySoapIn" />
+      <wsdl:output message="tns:CamIdHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationNameByUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getting User Geo Location based on USER </wsdl:documentation>
+      <wsdl:input message="tns:GetLocationNameByUserSoapIn" />
+      <wsdl:output message="tns:GetLocationNameByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeOfCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Getting Type of Card based on CamId ranges</wsdl:documentation>
+      <wsdl:input message="tns:GetTypeOfCardSoapIn" />
+      <wsdl:output message="tns:GetTypeOfCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValCamExceptvsModel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> Validate CamExceptions </wsdl:documentation>
+      <wsdl:input message="tns:ValCamExceptvsModelSoapIn" />
+      <wsdl:output message="tns:ValCamExceptvsModelSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CamIdValidationServiceSoap" type="tns:CamIdValidationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertCamId">
+      <soap:operation soapAction="http://tempuri.org/InsertCamId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamId">
+      <soap:operation soapAction="http://tempuri.org/UpdateCamId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCamId">
+      <soap:operation soapAction="http://tempuri.org/ReportCamId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamIdANDSerial">
+      <soap:operation soapAction="http://tempuri.org/UpdateCamIdANDSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CamIdHistory">
+      <soap:operation soapAction="http://tempuri.org/CamIdHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationNameByUser">
+      <soap:operation soapAction="http://tempuri.org/GetLocationNameByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeOfCard">
+      <soap:operation soapAction="http://tempuri.org/GetTypeOfCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValCamExceptvsModel">
+      <soap:operation soapAction="http://tempuri.org/ValCamExceptvsModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CamIdValidationServiceSoap12" type="tns:CamIdValidationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertCamId">
+      <soap12:operation soapAction="http://tempuri.org/InsertCamId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamId">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCamId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCamId">
+      <soap12:operation soapAction="http://tempuri.org/ReportCamId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCamIdANDSerial">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCamIdANDSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CamIdHistory">
+      <soap12:operation soapAction="http://tempuri.org/CamIdHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationNameByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetLocationNameByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeOfCard">
+      <soap12:operation soapAction="http://tempuri.org/GetTypeOfCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValCamExceptvsModel">
+      <soap12:operation soapAction="http://tempuri.org/ValCamExceptvsModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CamIdValidationService">
+    <wsdl:port name="CamIdValidationServiceSoap" binding="tns:CamIdValidationServiceSoap">
+      <soap:address location="http://jgswebservicesdev/CamIdValidationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CamIdValidationServiceSoap12" binding="tns:CamIdValidationServiceSoap12">
+      <soap12:address location="http://jgswebservicesdev/CamIdValidationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

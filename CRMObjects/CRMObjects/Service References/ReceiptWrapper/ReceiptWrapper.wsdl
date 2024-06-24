@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateCRO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CROInfo" type="tns:CROInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="JustReturnXML" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CROInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Client" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BTT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Geography" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warehouse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRef1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientRef2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HeaderNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HeaderFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lines" type="tns:ArrayOfCROLine" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneList" type="tns:ArrayOfPhoneTypes" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactDescrip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactAddress3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactPostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactAddressDescrip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFlexFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FlexFields" type="tns:FlexFields" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FlexFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCROLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CROLine" type="tns:CROLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CROLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warranty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Taxable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Priority" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Condition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPoLineNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinesNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumbers" type="tns:ArrayOfCROSerialNumbers" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCROSerialNumbers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CROSerialNumbers" type="tns:CROSerialNumbers" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CROSerialNumbers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialFlexFields" type="tns:ArrayOfFlexFields" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPhoneTypes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhoneTypes" type="tns:PhoneTypes" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhoneTypes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:PhoneTypesList" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PhoneTypesList">
+        <s:restriction base="s:string">
+          <s:enumeration value="DaytimePhone" />
+          <s:enumeration value="EveningPhone" />
+          <s:enumeration value="MobilePhone" />
+          <s:enumeration value="Pager" />
+          <s:enumeration value="Fax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateCROResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCROResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRO_Receipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CROInfo" type="tns:CROInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiptInfo" type="tns:ReceiptInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="JustReturnXML" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReceiptInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackingListNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrackingNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lines" type="tns:ArrayOfLine" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExternalReceiptData" type="tns:ExternalReceiptData" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APIUsage_LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APIUsage_ClientName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Line" type="tns:Line" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Line">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Item" type="tns:ArrayOfItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Item" type="tns:Item" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Item">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FixedAssetTag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RevisionLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BCN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="1" maxOccurs="1" name="Warranty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalSerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OriginalBCN" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExternalReceiptData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Application" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warehouse" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateRO_ReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateRO_ReceiptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Receipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiptInfo" type="tns:ReceiptInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefOrder" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCROV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="createReferenceOrderInfo" type="tns:createReferenceOrderInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="JustReturnXML" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="createReferenceOrderInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="systemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderInfo" type="tns:ReferenceOrderInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CallSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APIUsage_LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APIUsage_ClientName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReferenceOrderInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="billToDo" type="tns:ContactAddressInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="billingTermsAbbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="btType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientAbbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientRefNo1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientRefNo2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="custOrderNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customerAbbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dfltPOAbbrv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dfltPaymentTermsAbbrv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documentNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="geography" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="headerFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inboundAddressAbbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="newLineList" type="tns:ArrayOfReferenceOrderLine" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="outboundAddressAbbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="shipToDo" type="tns:ContactAddressInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="systemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="warehouse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="wsFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdTradPart_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdTradPart_Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdTradPart_OrderPaymentTerms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdTradPart_BillShipToSameContactAndAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NonValidatedTradingPartner" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContactAddressInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AddressInfo" type="tns:AddressInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactInfo" type="tns:ContactInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AddressInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="abbrv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="addrName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="line1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="line2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="line3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="line4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="postalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContactInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="abbrv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contactDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="mobilePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pager" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="primaryPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReferenceOrderLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReferenceOrderLine" type="tns:ReferenceOrderLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReferenceOrderLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ABomPN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="condition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="custOrderLineNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="custPartNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lineFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="manufacturer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manufacturerPartNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderLineNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="partList" type="tns:ArrayOfRDEOrderPart" />
+          <s:element minOccurs="0" maxOccurs="1" name="partNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="priority" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="qty" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reasonCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reasonNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="shippingTermsAbbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="taxableFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="unitPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="warrantyFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_AllowPartialShipment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_Carrier" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_CarrierType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_FobCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_FreightAccountCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrdShipTerm_ServiceType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRDEOrderPart">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RDEOrderPart" type="tns:RDEOrderPart" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RDEOrderPart">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="bcn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="orderLineId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="partFlexFields" type="tns:ArrayOfFlexFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="reasonCodeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reasonNotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="serialNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingTerms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxableInd" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateCROV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCROV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiptInfo" type="tns:ReceiptInfo" />
+            <s:element minOccurs="0" maxOccurs="1" name="XelusIO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateReferenceOrderInfo" type="tns:createReferenceOrderInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="JustReturnXML" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateROResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateROResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRO_ReceiptV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="createReferenceOrderInfo" type="tns:createReferenceOrderInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiptInfo" type="tns:ReceiptInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="JustReturnXML" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRO_ReceiptV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateRO_ReceiptV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_RO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderIdentificatorValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdentificatorType" type="tns:SearchROTypes" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DefaultGeo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SearchROTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="ReferenceOrderID" />
+          <s:enumeration value="ClientReferenceNo1" />
+          <s:enumeration value="ClientReferenceNo2" />
+          <s:enumeration value="InboundOrderID" />
+          <s:enumeration value="SerialNumber" />
+          <s:enumeration value="PartNumber" />
+          <s:enumeration value="TrackingNo" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Search_ROResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Search_ROResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="P_IO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLineInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineSerialData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LineId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="P_IO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineSerialDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLineSerialDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateCROSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCRO" />
+  </wsdl:message>
+  <wsdl:message name="CreateCROSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCROResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateRO_ReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateRO_Receipt" />
+  </wsdl:message>
+  <wsdl:message name="CreateRO_ReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateRO_ReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:Receipt" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCROV2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCROV2" />
+  </wsdl:message>
+  <wsdl:message name="CreateCROV2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCROV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptV2SoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiptV2" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptV2SoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiptV2Response" />
+  </wsdl:message>
+  <wsdl:message name="UpdateROSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRO" />
+  </wsdl:message>
+  <wsdl:message name="UpdateROSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateROResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateRO_ReceiptV2SoapIn">
+    <wsdl:part name="parameters" element="tns:CreateRO_ReceiptV2" />
+  </wsdl:message>
+  <wsdl:message name="CreateRO_ReceiptV2SoapOut">
+    <wsdl:part name="parameters" element="tns:CreateRO_ReceiptV2Response" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROSoapIn">
+    <wsdl:part name="parameters" element="tns:Search_RO" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROSoapOut">
+    <wsdl:part name="parameters" element="tns:Search_ROResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLineInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLineInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLineSerialData" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLineSerialDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROHttpGetIn">
+    <wsdl:part name="OrderIdentificatorValue" type="s:string" />
+    <wsdl:part name="IdentificatorType" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="DefaultGeo" type="s:string" />
+    <wsdl:part name="RO" type="s:string" />
+    <wsdl:part name="IO" type="s:string" />
+    <wsdl:part name="SN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoHttpGetIn">
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="P_IO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataHttpGetIn">
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="LineId" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="P_IO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROHttpPostIn">
+    <wsdl:part name="OrderIdentificatorValue" type="s:string" />
+    <wsdl:part name="IdentificatorType" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="DefaultGeo" type="s:string" />
+    <wsdl:part name="RO" type="s:string" />
+    <wsdl:part name="IO" type="s:string" />
+    <wsdl:part name="SN" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_ROHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoHttpPostIn">
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="P_IO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataHttpPostIn">
+    <wsdl:part name="OrderId" type="s:string" />
+    <wsdl:part name="LineId" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="P_IO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineSerialDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="ReceiptWrapperSoap">
+    <wsdl:operation name="CreateCRO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for Create a Reference Order, the result will be the RO number</wsdl:documentation>
+      <wsdl:input message="tns:CreateCROSoapIn" />
+      <wsdl:output message="tns:CreateCROSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_Receipt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for Create a Reference Order and Perform a Blind Receipt Against that RO, the result will be the Receipt number</wsdl:documentation>
+      <wsdl:input message="tns:CreateRO_ReceiptSoapIn" />
+      <wsdl:output message="tns:CreateRO_ReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for receipts units againt a RO provided by the user, the result will be the Receipt number</wsdl:documentation>
+      <wsdl:input message="tns:ReceiptSoapIn" />
+      <wsdl:output message="tns:ReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCROV2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for Create a Reference Order, the result will be the RO number</wsdl:documentation>
+      <wsdl:input message="tns:CreateCROV2SoapIn" />
+      <wsdl:output message="tns:CreateCROV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptV2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for receipts units againt a RO provided by the user, the result will be the Receipt number</wsdl:documentation>
+      <wsdl:input message="tns:ReceiptV2SoapIn" />
+      <wsdl:output message="tns:ReceiptV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will update any given parameters on the respective Reference Order, the result will be [SUCCESS]</wsdl:documentation>
+      <wsdl:input message="tns:UpdateROSoapIn" />
+      <wsdl:output message="tns:UpdateROSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_ReceiptV2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will be used for Create a Reference Order and Perform a Blind Receipt Against that RO, the result will be the Receipt number</wsdl:documentation>
+      <wsdl:input message="tns:CreateRO_ReceiptV2SoapIn" />
+      <wsdl:output message="tns:CreateRO_ReceiptV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_RO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for a Reference Order tied with specified parameter</wsdl:documentation>
+      <wsdl:input message="tns:Search_ROSoapIn" />
+      <wsdl:output message="tns:Search_ROSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will retrieve the information from the Lines of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineInfoSoapIn" />
+      <wsdl:output message="tns:GetLineInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for the Line Serial Number details of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineSerialDataSoapIn" />
+      <wsdl:output message="tns:GetLineSerialDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ReceiptWrapperHttpGet">
+    <wsdl:operation name="Search_RO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for a Reference Order tied with specified parameter</wsdl:documentation>
+      <wsdl:input message="tns:Search_ROHttpGetIn" />
+      <wsdl:output message="tns:Search_ROHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will retrieve the information from the Lines of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineInfoHttpGetIn" />
+      <wsdl:output message="tns:GetLineInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for the Line Serial Number details of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineSerialDataHttpGetIn" />
+      <wsdl:output message="tns:GetLineSerialDataHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ReceiptWrapperHttpPost">
+    <wsdl:operation name="Search_RO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for a Reference Order tied with specified parameter</wsdl:documentation>
+      <wsdl:input message="tns:Search_ROHttpPostIn" />
+      <wsdl:output message="tns:Search_ROHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will retrieve the information from the Lines of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineInfoHttpPostIn" />
+      <wsdl:output message="tns:GetLineInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method will look for the Line Serial Number details of the given Inbound Order</wsdl:documentation>
+      <wsdl:input message="tns:GetLineSerialDataHttpPostIn" />
+      <wsdl:output message="tns:GetLineSerialDataHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReceiptWrapperSoap" type="tns:ReceiptWrapperSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateCRO">
+      <soap:operation soapAction="http://tempuri.org/CreateCRO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_Receipt">
+      <soap:operation soapAction="http://tempuri.org/CreateRO_Receipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <soap:operation soapAction="http://tempuri.org/Receipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCROV2">
+      <soap:operation soapAction="http://tempuri.org/CreateCROV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptV2">
+      <soap:operation soapAction="http://tempuri.org/ReceiptV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRO">
+      <soap:operation soapAction="http://tempuri.org/UpdateRO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_ReceiptV2">
+      <soap:operation soapAction="http://tempuri.org/CreateRO_ReceiptV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_RO">
+      <soap:operation soapAction="http://tempuri.org/Search_RO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <soap:operation soapAction="http://tempuri.org/GetLineInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <soap:operation soapAction="http://tempuri.org/GetLineSerialData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReceiptWrapperSoap12" type="tns:ReceiptWrapperSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateCRO">
+      <soap12:operation soapAction="http://tempuri.org/CreateCRO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_Receipt">
+      <soap12:operation soapAction="http://tempuri.org/CreateRO_Receipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Receipt">
+      <soap12:operation soapAction="http://tempuri.org/Receipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCROV2">
+      <soap12:operation soapAction="http://tempuri.org/CreateCROV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptV2">
+      <soap12:operation soapAction="http://tempuri.org/ReceiptV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRO">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRO_ReceiptV2">
+      <soap12:operation soapAction="http://tempuri.org/CreateRO_ReceiptV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_RO">
+      <soap12:operation soapAction="http://tempuri.org/Search_RO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetLineInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <soap12:operation soapAction="http://tempuri.org/GetLineSerialData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReceiptWrapperHttpGet" type="tns:ReceiptWrapperHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Search_RO">
+      <http:operation location="/Search_RO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <http:operation location="/GetLineInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <http:operation location="/GetLineSerialData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReceiptWrapperHttpPost" type="tns:ReceiptWrapperHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Search_RO">
+      <http:operation location="/Search_RO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineInfo">
+      <http:operation location="/GetLineInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineSerialData">
+      <http:operation location="/GetLineSerialData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiptWrapper">
+    <wsdl:port name="ReceiptWrapperSoap" binding="tns:ReceiptWrapperSoap">
+      <soap:address location="http://jgswebservicesstg/ReceiptWrapper.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReceiptWrapperSoap12" binding="tns:ReceiptWrapperSoap12">
+      <soap12:address location="http://jgswebservicesstg/ReceiptWrapper.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReceiptWrapperHttpGet" binding="tns:ReceiptWrapperHttpGet">
+      <http:address location="http://jgswebservicesstg/ReceiptWrapper.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReceiptWrapperHttpPost" binding="tns:ReceiptWrapperHttpPost">
+      <http:address location="http://jgswebservicesstg/ReceiptWrapper.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

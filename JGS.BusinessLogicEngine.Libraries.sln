@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{4F6B24CF-FB2F-4B68-AE5F-E1E9CC3FEF45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{3C02E337-8595-4FBE-AF22-CB40AF6D2C84}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\Debug\JGS.BusinessLogicEngine.WCF.dll = Deploy\Debug\JGS.BusinessLogicEngine.WCF.dll
+		Deploy\Debug\JGS.MessageQueues.dll = Deploy\Debug\JGS.MessageQueues.dll
+		Deploy\Debug\JGS.Shared.dll = Deploy\Debug\JGS.Shared.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{2B7E414B-1ED5-4856-8E5F-9978D8BCA36F}"
+	ProjectSection(SolutionItems) = preProject
+		Deploy\Release\JGS.BusinessLogicEngine.EngineService.dll = Deploy\Release\JGS.BusinessLogicEngine.EngineService.dll
+		Deploy\Release\JGS.MessageQueues.dll = Deploy\Release\JGS.MessageQueues.dll
+		Deploy\Release\JGS.Shared.dll = Deploy\Release\JGS.Shared.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Shared", "JGS.Shared\JGS.Shared.csproj", "{915A64BF-E96A-4D12-AEED-AE7D3898633D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartQueue", "JGS.MessageQueues\SmartQueue\SmartQueue\SmartQueue.csproj", "{971FDA81-16E1-493E-B3A4-E79BE2F060A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.BusinessLogicEngine", "JGS.BusinessLogicEngine.EngineService\EngineService\JGS.BusinessLogicEngine.csproj", "{2E1F4806-9F43-4311-BB98-C0A0E44E5EFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915A64BF-E96A-4D12-AEED-AE7D3898633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915A64BF-E96A-4D12-AEED-AE7D3898633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915A64BF-E96A-4D12-AEED-AE7D3898633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915A64BF-E96A-4D12-AEED-AE7D3898633D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971FDA81-16E1-493E-B3A4-E79BE2F060A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1F4806-9F43-4311-BB98-C0A0E44E5EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1F4806-9F43-4311-BB98-C0A0E44E5EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1F4806-9F43-4311-BB98-C0A0E44E5EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1F4806-9F43-4311-BB98-C0A0E44E5EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C02E337-8595-4FBE-AF22-CB40AF6D2C84} = {4F6B24CF-FB2F-4B68-AE5F-E1E9CC3FEF45}
+		{2B7E414B-1ED5-4856-8E5F-9978D8BCA36F} = {4F6B24CF-FB2F-4B68-AE5F-E1E9CC3FEF45}
+	EndGlobalSection
+EndGlobal

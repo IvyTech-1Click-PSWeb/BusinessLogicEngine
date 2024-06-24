@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CRMOneClickService>
+  <BLEHeader>
+    <!--Required for BLE Header -->
+    <Process_Type>CRM_PartAvail, CRM_CreateOrder</Process_Type>
+    <!--Required for BLE Header -->
+    <!--Process Name from Process Validation-->
+    <Location>Geo_Location_Name from Validate_CRM_Client_Info table</Location>
+    <!--Required for BLE Header -->
+    <Client>Client_Name from Validate_CRM_Client_Info table</Client>
+    <!--Required for BLE Header -->
+    <Contract>Contract_Name from Validate_CRM_Client_Info table</Contract>
+    <!--Optional in BLE Header -->
+    <OrderProcessType />
+    <!--Optional in BLE Header -->
+    <WorkCenter />
+    <UserObj>
+      <HostName>GeneralHost</HostName>
+      <UserName>GeneralUser</UserName>
+      <Password>GeneralPassword</Password>
+    </UserObj>
+  </BLEHeader>
+  <BLEDetail>
+    <CRMSiteCode>CRM Customer "Site" Code</CRMSiteCode>
+    <CRMInterfaceName>Interface Name from CRM</CRMInterfaceName>
+    <!--DispositionType is hard coded to the .NET plugin in CRM-->
+    <DispositionType>"Customer Replaceable Unit" or "Whole Unit Repair"</DispositionType>
+    <CustomerRMA>Customer_PO</CustomerRMA>
+    <WUR_SerialNo>ClientRefNo1</WUR_SerialNo>
+    <CRMIncidentNo>ClientRefNo2</CRMIncidentNo>
+    <OrderType>"Ship Only", "Advanced Exchange", "Post Exchange", "Empty Box", "Whole Unit Return"</OrderType>
+    <!--Requirements for Part Avail Check = Customer RMA, CRM Incident Number, Part Number(Model Number), Action(Disposition), Priority, and ShipTo Address -->
+    <PartAvailabilityInfo>
+      <!--Model or SKU of the Whole Unit from CRM **Needed for Part Lookup** -->
+      <Product>PartNo</Product>
+      <!--The Disposition coming from CRM-->
+      <DispositionCode>Battery</DispositionCode>
+      <!--Quantity value set in CRM -->
+      <Quantity>1</Quantity>
+      <!--This is the RNR (A.L.E.) order priority - Needs to be set to insure propoer Allocation -->
+      <Priority>Based on standard priority matrix defined by Materials</Priority>
+      <!--OPTIONAL - Code setup in RNR to indicate a specific Carrier and Service Type -->
+      <ShippingTerms>"UPS1Day" as an example</ShippingTerms>
+      <!--OPTIONAL - Desired Order Delivery Date  - built based on logic of SYSDATE+ServiceLevel-->
+      <OrderDeliveryDate>YYYYMMDD</OrderDeliveryDate>
+      <!-- This is based on Warranty of Unit; passed by CRM or defaulted to “Yes” -->
+      <Warranty>Yes</Warranty>
+      <CustomerInfo>
+        <CustomerName>Customer</CustomerName>
+        <!--Customer ShipTo Required for RNR -->
+        <ShippingAddress>
+          <!--Contact Name from CRM -->
+          <ContactName>ContactName1</ContactName>
+          <!--Contact Email from CRM -->
+          <ContactEmail>Contact@domain.com</ContactEmail>
+          <!--Contact Phone from CRM - PhoneType is DEFINED list in RNR!! -->
+          <ContactPhone>
+            <PhoneType>PrimaryPhone</PhoneType>
+            <PhoneNo>999-999-9999</PhoneNo>
+          </ContactPhone>
+          <!--Address Line 1 from CRM -->
+          <ContactAddress1>ContactAddress1</ContactAddress1>
+          <!--Address Line 2 from CRM -->
+          <ContactAddress2>ContactAddress2</ContactAddress2>
+          <!--Address Line 3 from CRM -->
+          <ContactAddress3>ContactAddress3</ContactAddress3>
+          <!--Address City from CRM -->
+          <ContactCity>ContactCity</ContactCity>
+          <!--Address State from CRM - Optional in some Countries! -->
+          <ContactState>ContactState</ContactState>
+          <!--Address ZIP from CRM - Optional in some Countries! -->
+          <ContactPostalCode>ContactZIPCode</ContactPostalCode>
+          <!--ISO Country Code REQUIRED!!  This is the Address Country from CRM -->
+          <ContactCountry>ContactCountry1</ContactCountry>
+        </ShippingAddress>
+        <!--OPTIONAL SECTION - Only specified IF Customer is paying and not Jabil!! -->
+        <BillingAddress>
+          <!--Contact Name from CRM -->
+          <ContactName>ContactName1</ContactName>
+          <!--Contact Email from CRM -->
+          <ContactEmail>Contact@domain.com</ContactEmail>
+          <!--Contact Phone from CRM - PhoneType is DEFINED list in RNR!! -->
+          <ContactPhone>
+            <PhoneType>PrimaryPhone</PhoneType>
+            <PhoneNo>999-999-9999</PhoneNo>
+          </ContactPhone>
+          <!--Address Line 1 from CRM -->
+          <ContactAddress1>ContactAddress1</ContactAddress1>
+          <!--Address Line 2 from CRM -->
+          <ContactAddress2>ContactAddress2</ContactAddress2>
+          <!--Address Line 3 from CRM -->
+          <ContactAddress3>ContactAddress3</ContactAddress3>
+          <!--Address City from CRM -->
+          <ContactCity>ContactCity</ContactCity>
+          <!--Address State from CRM - Optional in some Countries! -->
+          <ContactState>ContactState</ContactState>
+          <!--Address ZIP from CRM - Optional in some Countries! -->
+          <ContactPostalCode>ContactZIPCode</ContactPostalCode>
+          <!--ISO Country Code REQUIRED!!  This is the Address Country from CRM -->
+          <ContactCountry>ContactCountry1</ContactCountry>
+        </BillingAddress>
+      </CustomerInfo>
+    </PartAvailabilityInfo>
+    <CreateOrderInfo>
+      <OrderHeader>
+        <CustomerTradingPartner>This is defaulted to "HP" or something like that; but it could be identifier for TCC location</CustomerTradingPartner>
+        <OrderStatus>"Firm" by default; ALE will "Release" on allocation</OrderStatus>
+        <CustomerInfo>
+          <CustomerName>Customer</CustomerName>
+          <!--Customer ShipTo Required for RNR -->
+          <ShippingAddress>
+            <!--Contact Name from CRM -->
+            <ContactName>ContactName1</ContactName>
+            <!--Contact Email from CRM -->
+            <ContactEmail>Contact@domain.com</ContactEmail>
+            <!--Contact Phone from CRM - PhoneType is DEFINED list in RNR!! -->
+            <ContactPhone>
+              <PhoneType>PrimaryPhone</PhoneType>
+              <PhoneNo>999-999-9999</PhoneNo>
+            </ContactPhone>
+            <!--Address Line 1 from CRM -->
+            <ContactAddress1>ContactAddress1</ContactAddress1>
+            <!--Address Line 2 from CRM -->
+            <ContactAddress2>ContactAddress2</ContactAddress2>
+            <!--Address Line 3 from CRM -->
+            <ContactAddress3>ContactAddress3</ContactAddress3>
+            <!--Address City from CRM -->
+            <ContactCity>ContactCity</ContactCity>
+            <!--Address State from CRM - Optional in some Countries! -->
+            <ContactState>ContactState</ContactState>
+            <!--Address ZIP from CRM - Optional in some Countries! -->
+            <ContactPostalCode>ContactZIPCode</ContactPostalCode>
+            <!--ISO Country Code REQUIRED!!  This is the Address Country from CRM -->
+            <ContactCountry>ContactCountry1</ContactCountry>
+          </ShippingAddress>
+          <!--OPTIONAL SECTION - Only specified IF Customer is paying and not Jabil!! -->
+          <BillingAddress>
+            <!--Contact Name from CRM -->
+            <ContactName>ContactName1</ContactName>
+            <!--Contact Email from CRM -->
+            <ContactEmail>Contact@domain.com</ContactEmail>
+            <!--Contact Phone from CRM - PhoneType is DEFINED list in RNR!! -->
+            <ContactPhone>
+              <PhoneType>PrimaryPhone</PhoneType>
+              <PhoneNo>999-999-9999</PhoneNo>
+            </ContactPhone>
+            <!--Address Line 1 from CRM -->
+            <ContactAddress1>ContactAddress1</ContactAddress1>
+            <!--Address Line 2 from CRM -->
+            <ContactAddress2>ContactAddress2</ContactAddress2>
+            <!--Address Line 3 from CRM -->
+            <ContactAddress3>ContactAddress3</ContactAddress3>
+            <!--Address City from CRM -->
+            <ContactCity>ContactCity</ContactCity>
+            <!--Address State from CRM - Optional in some Countries! -->
+            <ContactState>ContactState</ContactState>
+            <!--Address ZIP from CRM - Optional in some Countries! -->
+            <ContactPostalCode>ContactZIPCode</ContactPostalCode>
+            <!--ISO Country Code REQUIRED!!  This is the Address Country from CRM -->
+            <ContactCountry>ContactCountry1</ContactCountry>
+          </BillingAddress>
+        </CustomerInfo>
+        <NOTE>This will be the "Call Log" from CRM</NOTE>
+      </OrderHeader>
+      <OrderLineDetail>
+        <Part_No>PartNo from Part Avail. Check</Part_No>
+        <!--Quantity value set in CRM -->
+        <Quantity>1</Quantity>
+        <!--This is the CONDITION of inventory-->
+        <Condition>Refurbished, New, etc...</Condition>
+        <!--This is the RNR (A.L.E.) order priority - Needs to be set to insure propoer Allocation -->
+        <Priority>Based on standard priority matrix defined by Materials</Priority>
+        <!--OPTIONAL - Code setup in RNR to indicate a specific Carrier and Service Type -->
+        <ShippingTerms>"UPS1Day" as an example</ShippingTerms>
+        <!--OPTIONAL - Desired Order Delivery Date  - built based on logic of SYSDATE+ServiceLevel-->
+        <OrderDeliveryDate>YYYYMMDD</OrderDeliveryDate>
+        <!-- This is based on Warranty of Unit; passed by CRM or defaulted to “Yes” -->
+        <Warranty>Yes</Warranty>
+        <!--Returned from BLE in Part Availability lookup -->
+        <UnitPrice>UnitPrice</UnitPrice>
+        <!--Returned from BLE in Part Availability lookup -->
+        <Currency>Currency</Currency>
+        <NOTE />
+      </OrderLineDetail>
+    </CreateOrderInfo>
+  </BLEDetail>
+  <TransactionInformation>
+    <Messages>
+      <Message>Message1</Message>
+      <Message>Message2</Message>
+      <Message>Message3</Message>
+    </Messages>
+    <Status>New</Status>
+    <DistributedIdentifier>DistributedIdentifier1</DistributedIdentifier>
+    <CreationTime>1900-01-01T01:01:01-05:00</CreationTime>
+  </TransactionInformation>
+</CRMOneClickService>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JGS.Web.RIMTriggerProviders</RootNamespace>
+    <AssemblyName>JGS.Web.RIMTriggerProviders</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JGS.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dlls\JGS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JGS.Web.TriggerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dlls\JGS.TriggerProviders\Debug\JGS.Web.TriggerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dlls\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RIMC1CTRIGGERSVALIDATIONS.cs" />
+    <Compile Include="RIMTRIGGERBERUR.cs" />
+    <Compile Include="RIMTRIGGERBILLINGVALIDATION.cs" />
+    <Compile Include="RIMTRIGGERBOUNCE.cs" />
+    <Compile Include="RIMTRIGGERBOUNCEDISP.cs" />
+    <Compile Include="RIMTRIGGERBOUNCERECEIPT.cs" />
+    <Compile Include="RIMTRIGGERBOUNCERESULT.cs" />
+    <Compile Include="RIMTRIGGERCHANGEPART.cs" />
+    <Compile Include="RIMTRIGGERCHANGEPARTVALIDATION.cs" />
+    <Compile Include="RIMTRIGGERCHARGEDCOMPS.cs" />
+    <Compile Include="RIMTRIGGERDIAGCODE.cs" />
+    <Compile Include="RIMTRIGGEREXCEPTIONS.cs" />
+    <Compile Include="RIMTRIGGEREXCEPTIONSRO.cs" />
+    <Compile Include="RIMTRIGGERFDSHPEXCEPTION.cs" />
+    <Compile Include="RIMTRIGGERLABELCHANGEPART.cs" />
+    <Compile Include="RIMTRIGGERLINE.cs" />
+    <Compile Include="RIMTRIGGERNOTMORE3COMP.cs" />
+    <Compile Include="RIMTRIGGERNOTMOREBERCODES.cs" />
+    <Compile Include="RIMTRIGGERNOTMORECOMP.cs" />
+    <Compile Include="RIMTRIGGEROLDSNRMA.cs" />
+    <Compile Include="RIMTRIGGERPGIVERIZONPOOL.cs" />
+    <Compile Include="RIMTRIGGERPROVIDER.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RIMTRIGGERQAVALIDATION.cs" />
+    <Compile Include="RIMTRIGGERQTYFF.cs" />
+    <Compile Include="RIMTRIGGERRECEIPTSTATUS.cs" />
+    <Compile Include="RIMTRIGGERRETWITHOUTEXC.cs" />
+    <Compile Include="RIMTRIGGERSERVICELEVEL.cs" />
+    <Compile Include="RIMTRIGGERSYMINBER.cs" />
+    <Compile Include="RIMTRIGGERSYMPTOMCODE.cs" />
+    <Compile Include="RIMTRIGGERSYMPTONCODE.cs" />
+    <Compile Include="RIMTRIGGERSYMVALIDATION.cs" />
+    <Compile Include="RIMTRIGGERVALIDATIONMPCS.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

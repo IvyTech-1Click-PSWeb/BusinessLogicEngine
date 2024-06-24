@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.DellTriggerProviders", "JGS.Web.DellTriggerProviders\JGS.Web.DellTriggerProviders.csproj", "{B692F634-5A79-4E10-AFB9-307533C75799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.DellTriggerProviders.Test", "JGS.Web.DellTriggerProviders.Test\JGS.Web.DellTriggerProviders.Test.csproj", "{006B0ACE-E81A-4DE2-8C97-E170F911CB84}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://jgsptfs01:8080/
+		SccProjectUniqueName0 = JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders.csproj
+		SccProjectName0 = JGS.Web.DellTriggerProviders
+		SccAuxPath0 = http://jgsptfs01:8080
+		SccLocalPath0 = JGS.Web.DellTriggerProviders
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

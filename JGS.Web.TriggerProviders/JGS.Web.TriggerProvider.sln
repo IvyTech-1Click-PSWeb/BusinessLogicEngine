@@ -1,0 +1,139 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.DellTriggerProviders", "JGS.Web.DellTriggerProviders\JGS.Web.DellTriggerProviders\JGS.Web.DellTriggerProviders.csproj", "{B692F634-5A79-4E10-AFB9-307533C75799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.TriggerProviders.Test", "JGS.Web.DellTriggerProviders\JGS.Web.DellTriggerProviders.Test\JGS.Web.TriggerProviders.Test.csproj", "{006B0ACE-E81A-4DE2-8C97-E170F911CB84}"
+	ProjectSection(ProjectDependencies) = postProject
+		{65DC30A9-9257-490F-88F8-DAC3879157A6} = {65DC30A9-9257-490F-88F8-DAC3879157A6}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JGS.Web.TriggerProviders", "JGS.Web.TriggerProviders\JGS.Web.TriggerProviders.vbproj", "{8A72760E-88C9-482C-B5C2-C025396E1C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.HTCTriggerProviders", "JGS.Web.HTCTriggerProviders\JGS.Web.HTCTriggerProviders.csproj", "{6C65E254-A4AB-44FE-B5F2-3540F3B7FE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.DTVTriggerProviders", "JGS.Web.DTVTriggerProviders\JGS.Web.DTVTriggerProviders.csproj", "{65DC30A9-9257-490F-88F8-DAC3879157A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.RIMTriggerProviders", "JGS.Web.RIMTriggerProviders\JGS.Web.RIMTriggerProviders.csproj", "{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.Global.LooperControl", "JGS.Web.Global.LooperControl\JGS.Web.Global.LooperControl.csproj", "{E4857EC4-19F0-4AF4-A20A-7C6543269ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.BBYTriggerProviders", "JGS.Web.BBYTriggerProviders\JGS.Web.BBYTriggerProviders.csproj", "{88A2D2AE-69FD-49F1-8D79-C4ED135001F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.HPTriggerProviders", "JGS.Web.HPTriggerProviders\JGS.Web.HPTriggerProviders.csproj", "{6267C7F4-C907-4541-992E-B497249D4E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.LenovoTriggerProviders", "JGS.Web.LenovoTriggerProviders\JGS.Web.LenovoTriggerProviders.csproj", "{8096B417-BA7A-43BB-828E-3544DAA72F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.GDITriggerProviders", "JGS.Web.GDITriggerProviders\JGS.Web.GDITriggerProviders.csproj", "{08DB7290-33D5-4159-BF04-7FFFD83B63E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.GlobalUtilityClassesTriggerProviders", "JGS.Web.GlobalUtilityClassesTriggerProviders\JGS.Web.GlobalUtilityClassesTriggerProviders.csproj", "{09A8A693-47D0-489B-9919-268DBA9F8944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGS.Web.MSTriggerProviders", "JGS.Web.MSTriggerProvider\JGS.Web.MSTriggerProviders.csproj", "{BAE52CF7-477E-4C28-9E26-2750A2E2CB0A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://jgsptfs01:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders.csproj
+		SccProjectName1 = JGS.Web.DellTriggerProviders/JGS.Web.DellTriggerProviders
+		SccLocalPath1 = JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders
+		SccProjectUniqueName2 = JGS.Web.TriggerProviders\\JGS.Web.TriggerProviders.vbproj
+		SccProjectName2 = JGS.Web.TriggerProviders
+		SccLocalPath2 = JGS.Web.TriggerProviders
+		SccProjectUniqueName3 = JGS.Web.HTCTriggerProviders\\JGS.Web.HTCTriggerProviders.csproj
+		SccProjectName3 = JGS.Web.HTCTriggerProviders
+		SccLocalPath3 = JGS.Web.HTCTriggerProviders
+		SccProjectUniqueName4 = JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders.Test\\JGS.Web.TriggerProviders.Test.csproj
+		SccProjectName4 = JGS.Web.DellTriggerProviders/JGS.Web.DellTriggerProviders.Test
+		SccLocalPath4 = JGS.Web.DellTriggerProviders\\JGS.Web.DellTriggerProviders.Test
+		SccProjectUniqueName5 = JGS.Web.DTVTriggerProviders\\JGS.Web.DTVTriggerProviders.csproj
+		SccProjectName5 = JGS.Web.DTVTriggerProviders
+		SccLocalPath5 = JGS.Web.DTVTriggerProviders
+		SccProjectUniqueName6 = JGS.Web.RIMTriggerProviders\\JGS.Web.RIMTriggerProviders.csproj
+		SccProjectName6 = JGS.Web.RIMTriggerProviders
+		SccLocalPath6 = JGS.Web.RIMTriggerProviders
+		SccProjectUniqueName7 = JGS.Web.Global.LooperControl\\JGS.Web.Global.LooperControl.csproj
+		SccProjectName7 = JGS.Web.Global.LooperControl
+		SccLocalPath7 = JGS.Web.Global.LooperControl
+		SccProjectUniqueName8 = JGS.Web.BBYTriggerProviders\\JGS.Web.BBYTriggerProviders.csproj
+		SccProjectName8 = JGS.Web.BBYTriggerProviders
+		SccLocalPath8 = JGS.Web.BBYTriggerProviders
+		SccProjectUniqueName9 = JGS.Web.HPTriggerProviders\\JGS.Web.HPTriggerProviders.csproj
+		SccProjectName9 = JGS.Web.HPTriggerProviders
+		SccLocalPath9 = JGS.Web.HPTriggerProviders
+		SccProjectUniqueName10 = JGS.Web.LenovoTriggerProviders\\JGS.Web.LenovoTriggerProviders.csproj
+		SccProjectName10 = JGS.Web.LenovoTriggerProviders
+		SccLocalPath10 = JGS.Web.LenovoTriggerProviders
+		SccProjectUniqueName11 = JGS.Web.GDITriggerProviders\\JGS.Web.GDITriggerProviders.csproj
+		SccProjectName11 = JGS.Web.GDITriggerProviders
+		SccLocalPath11 = JGS.Web.GDITriggerProviders
+		SccProjectUniqueName12 = JGS.Web.GlobalUtilityClassesTriggerProviders\\JGS.Web.GlobalUtilityClassesTriggerProviders.csproj
+		SccProjectName12 = JGS.Web.GlobalUtilityClassesTriggerProviders
+		SccLocalPath12 = JGS.Web.GlobalUtilityClassesTriggerProviders
+		SccProjectUniqueName13 = JGS.Web.MSTriggerProvider\\JGS.Web.MSTriggerProviders.csproj
+		SccProjectName13 = JGS.Web.MSTriggerProvider
+		SccLocalPath13 = JGS.Web.MSTriggerProvider
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B692F634-5A79-4E10-AFB9-307533C75799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006B0ACE-E81A-4DE2-8C97-E170F911CB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A72760E-88C9-482C-B5C2-C025396E1C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A72760E-88C9-482C-B5C2-C025396E1C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A72760E-88C9-482C-B5C2-C025396E1C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A72760E-88C9-482C-B5C2-C025396E1C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C65E254-A4AB-44FE-B5F2-3540F3B7FE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C65E254-A4AB-44FE-B5F2-3540F3B7FE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C65E254-A4AB-44FE-B5F2-3540F3B7FE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C65E254-A4AB-44FE-B5F2-3540F3B7FE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65DC30A9-9257-490F-88F8-DAC3879157A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DC30A9-9257-490F-88F8-DAC3879157A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DC30A9-9257-490F-88F8-DAC3879157A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DC30A9-9257-490F-88F8-DAC3879157A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74D99BB-E954-48D6-B0AD-0B06C8E7272B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4857EC4-19F0-4AF4-A20A-7C6543269ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4857EC4-19F0-4AF4-A20A-7C6543269ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4857EC4-19F0-4AF4-A20A-7C6543269ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4857EC4-19F0-4AF4-A20A-7C6543269ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A2D2AE-69FD-49F1-8D79-C4ED135001F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A2D2AE-69FD-49F1-8D79-C4ED135001F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A2D2AE-69FD-49F1-8D79-C4ED135001F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A2D2AE-69FD-49F1-8D79-C4ED135001F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6267C7F4-C907-4541-992E-B497249D4E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6267C7F4-C907-4541-992E-B497249D4E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6267C7F4-C907-4541-992E-B497249D4E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6267C7F4-C907-4541-992E-B497249D4E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8096B417-BA7A-43BB-828E-3544DAA72F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8096B417-BA7A-43BB-828E-3544DAA72F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8096B417-BA7A-43BB-828E-3544DAA72F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8096B417-BA7A-43BB-828E-3544DAA72F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DB7290-33D5-4159-BF04-7FFFD83B63E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DB7290-33D5-4159-BF04-7FFFD83B63E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DB7290-33D5-4159-BF04-7FFFD83B63E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DB7290-33D5-4159-BF04-7FFFD83B63E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A8A693-47D0-489B-9919-268DBA9F8944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A8A693-47D0-489B-9919-268DBA9F8944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A8A693-47D0-489B-9919-268DBA9F8944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A8A693-47D0-489B-9919-268DBA9F8944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE52CF7-477E-4C28-9E26-2750A2E2CB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE52CF7-477E-4C28-9E26-2750A2E2CB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE52CF7-477E-4C28-9E26-2750A2E2CB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE52CF7-477E-4C28-9E26-2750A2E2CB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

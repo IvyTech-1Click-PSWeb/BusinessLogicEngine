@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="JGS.MessageQueues.SmartQueue.SmartQueue&lt;T&gt;">
+    <Position X="0.5" Y="0.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAKIkgACAAEAAIAAAAAAAAAAQAAAABAAgAAA=</HashCode>
+      <FileName>SmartQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JGS.MessageQueues.SmartQueue.MSMQQueue">
+    <Position X="5.25" Y="3.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAgABAAgAAAgAAAAgAAABAAAABAABABASAAAAAAAAgA=</HashCode>
+      <FileName>MSMQQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JGS.MessageQueues.SmartQueue.JMSQueue">
+    <Position X="8" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAgAAAgAAAAAAAAAAAAABAABABASAAAQAAAAAA=</HashCode>
+      <FileName>JMSQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JGS.MessageQueues.SmartQueue.InMemoryQueue">
+    <Position X="8.75" Y="3.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAgAAAgAAAAAAAABAAAABAABABASAAAQAAAAgA=</HashCode>
+      <FileName>InMemoryQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="JGS.MessageQueues.SmartQueue.IInternalQueue">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAKAkAACAAEAAAAAAAAAAAAAQAAAAAAAEAAA=</HashCode>
+      <FileName>IInternalQueue.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="JGS.MessageQueues.SmartQueue.Queue_Platform">
+    <Position X="0.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAABAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>SmartQueue.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.4" />
+</ClassDiagram>

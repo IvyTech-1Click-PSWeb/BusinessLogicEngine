@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentDefinitions
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://corporate.jabil.org/BusinessLogicEngine Validation/DocumentDefinitions.xsd"
+>
+  <DocumentDefinition Root="UnitTest">
+    <RequiredFields>
+      <Field Name="ProcessTypeName" IsAlphaNumeric="true">/UnitTest/ProcessTypeName</Field>
+      <Field Name="LocationId" IsNumeric="true">/UnitTest/LocationId</Field>
+      <Field Name="ClientId" IsNumeric="true">/UnitTest/ClientId</Field>
+      <Field Name="ContractId" IsNumeric="true">/UnitTest/ContractId</Field>
+      <Field Name="OrderProcessTypeId" IsNumeric="true">/UnitTest/OrderProcessTypeId</Field>
+      <Field Name="WorkcenterId" IsNumeric="true">/UnitTest/WorkcenterId</Field>
+    </RequiredFields>
+  </DocumentDefinition>
+
+  <DocumentDefinition Root="Trigger">
+    <RequiredFields>
+      <FieldGroup Name="ProcessType">
+        <Field Name="ProcessTypeId" IsNumeric="true">/Trigger/Header/TriggerTypeId</Field>
+        <Field Name="ProcessTypeName" IsAlphaNumeric="true">/Trigger/Header/TriggerType</Field>
+      </FieldGroup>
+      <FieldGroup Name="Location">
+        <Field Name="LocationId" IsNumeric="true">/Trigger/Header/LocationID</Field>
+        <Field Name="LocationName" IsAlphaNumeric="true">/Trigger/Header/LocationName</Field>
+      </FieldGroup>
+      <FieldGroup Name="Client">
+        <Field Name="ClientId" IsNumeric="true">/Trigger/Header/ClientID</Field>
+        <Field Name="ClientName" IsAlphaNumeric="true">/Trigger/Header/ClientName</Field>
+      </FieldGroup>
+      <FieldGroup Name="Contract">
+        <Field Name="ContractId" IsNumeric="true">/Trigger/Header/ContractID</Field>
+        <Field Name="ContractName" IsAlphaNumeric="true">/Trigger/Header/ContractName</Field>
+      </FieldGroup>
+      <FieldGroup Name="OrderProcessType">
+        <Field Name="OrderProcessTypeId" IsNumeric="true">/Trigger/Detail/ItemLevel/OrderProcessTypeID</Field>
+        <Field Name="OrderProcessTypeName" IsAlphaNumeric="true">/Trigger/Detail/ItemLevel/OrderProcessType</Field>
+      </FieldGroup>
+      <FieldGroup Name="Workcenter">
+        <Field Name="WorkcenterId" IsNumeric="true">/Trigger/Detail/ItemLevel/WorkCenterID</Field>
+        <Field Name="WorkcenterName" IsAlphaNumeric="true">/Trigger/Detail/ItemLevel/WorkCenter</Field>
+      </FieldGroup>
+    </RequiredFields>
+    <OptionalFields>
+      <Field Name="RequestId">/Trigger/Detail/ChangePart/RequestId</Field>
+      <Field Name="NewPartNo">/Trigger/Detail/ChangePart/NewPartNo</Field>
+      <Field Name="NewSerialNo">/Trigger/Detail/ChangePart/NewSerialNo</Field>
+      <Field Name="NewRevisionLevel">/Trigger/Detail/ChangePart/NewRevisionLevel</Field>
+      <Field Name="NewFixedAssetTag">/Trigger/Detail/ChangePart/NewFixedAssetTag</Field>
+      <Field Name="Notes">/Trigger/Detail/ChangePart/Notes</Field>
+      <Field Name="MustBeOnHold">/Trigger/Detail/ChangePart/MustBeOnHold</Field>
+      <Field Name="ReleaseIfHold">/Trigger/Detail/ChangePart/ReleaseIfHold</Field>
+      <Field Name="MustBeTimedIn">/Trigger/Detail/ChangePart/MustBeTimedIn</Field>
+      <Field Name="TimedInWorkCenterName">/Trigger/Detail/ChangePart/TimedInWorkCenterName</Field>
+      <Field Name="userName">/Trigger/Detail/ChangePart/UserName</Field>
+      <Field Name="FlexFieldsBase">/Trigger/Detail/ChangePart/FlexFields</Field>
+      <Field Name="FlexFieldName">Name</Field>
+      <Field Name="FlexFieldValue">Value</Field>
+      <Field Name="Result">/Trigger/Detail/TriggerResult/Result</Field>
+    </OptionalFields>
+  </DocumentDefinition>
+
+  <DocumentDefinition Root="FieldOneClick">
+    <RequiredFields>
+      <FieldGroup Name="ProcessType">
+        <Field Name="ProcessTypeId" IsNumeric="true">/FieldOneClick/Header/ProcessTypeId</Field>
+        <Field Name="ProcessTypeName">/FieldOneClick/Header/ProcessType</Field>
+      </FieldGroup>
+      <FieldGroup Name="Location">
+        <Field Name="LocationId" IsNumeric="true">/FieldOneClick/Header/LocationID</Field>
+        <Field Name="LocationName">/FieldOneClick/Header/Location</Field>
+      </FieldGroup>
+      <FieldGroup Name="Client">
+        <Field Name="ClientId" IsNumeric="true">/FieldOneClick/Header/ClientID</Field>
+        <Field Name="ClientName">/FieldOneClick/Header/Client</Field>
+      </FieldGroup>
+      <FieldGroup Name="Contract">
+        <Field Name="ContractId" IsNumeric="true">/FieldOneClick/Header/ContractID</Field>
+        <Field Name="ContractName">/FieldOneClick/Header/Contract</Field>
+      </FieldGroup>
+      <FieldGroup Name="OrderProcessType">
+        <Field Name="OrderProcessTypeId" IsNumeric="true">/FieldOneClick/Detail/ItemLevel/OrderProcessTypeID</Field>
+        <Field Name="OrderProcessTypeName">/FieldOneClick/Detail/ItemLevel/OrderProcessType</Field>
+      </FieldGroup>
+      <FieldGroup Name="Workcenter">
+        <Field Name="WorkcenterId" IsNumeric="true">/FieldOneClick/Detail/ItemLevel/WorkCenterID</Field>
+        <Field Name="WorkcenterName">/FieldOneClick/Detail/ItemLevel/WorkCenter</Field>
+      </FieldGroup>
+    </RequiredFields>
+  </DocumentDefinition>
+</DocumentDefinitions>

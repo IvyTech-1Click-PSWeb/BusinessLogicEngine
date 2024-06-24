@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JGS.Shared.TransactionInformation">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAgAAAAAAAAAAAAAQAAAAEAAAgQAAAAA=</HashCode>
+      <FileName>TransactionInformation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JGS.Shared.Extensions">
+    <Position X="12.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAIAAAAgAAAAAAgAAAAAAFAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Extension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JGS.Shared.Validation.DocumentDefinition">
+    <Position X="2" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAEAASAAIIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validation\DocumentDefinition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RequiredFields" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="JGS.Shared.Validation.Field">
+    <Position X="2" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAIABAAACAAAAAAAQAAAAAAAAAAIAAAAAAAAg=</HashCode>
+      <FileName>Validation\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JGS.Shared.Validation.Validator">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAQACAoACAEAgAAAAAAAAEAoAAAABAAgQBAAA=</HashCode>
+      <FileName>Validation\Validator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_documentDefinitions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="JGS.Shared.Process.ProcessAddress">
+    <Position X="7.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAEAAAAACAAAgAYABAAAAAAAEAIIQASAAAAAAAA=</HashCode>
+      <FileName>Process\ProcessAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JGS.Shared.Package.PackageAddress">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Package\PackageAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JGS.Shared.Package.Package">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAABAQAEACIAAAQAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Package\Package.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DestinationAddress" />
+      <Property Name="SourceAddress" />
+      <Property Name="TransactionInformation" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="JGS.Shared.TransactionStatus">
+    <Position X="13.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAggAAAAACAAAAAAAAAAAAAAAAAgAAAAAAAAAgA=</HashCode>
+      <FileName>TransactionInformation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="9.75" />
+</ClassDiagram>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="JGS.Web.DTVTriggerProviders.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="JGS_Web_DTVTriggerProviders_Printing_JGSPrintService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jgswebservicesstg/JGSPrintService.asmx</Value>
+    </Setting>
+    <Setting Name="JGS_Web_DTVTriggerProviders_QA_QueryAdapterWrapper" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jgswebservicesstg/QueryAdapterWrapper.asmx</Value>
+    </Setting>
+    <Setting Name="JGS_Web_DTVTriggerProviders_CamId_CamIdValidationService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jgswebservicesstg/CamIdValidationService.asmx</Value>
+    </Setting>
+    <Setting Name="JGS_Web_DTVTriggerProviders_ChangePart_ChangePartWrapper" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jgswebservicesstg/ChangePartWrapper.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

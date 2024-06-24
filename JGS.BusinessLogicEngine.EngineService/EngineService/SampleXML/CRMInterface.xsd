@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CRMOneClickService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BLEHeader">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Process_Type" type="xs:string" />
+              <xs:element name="Location" type="xs:string" />
+              <xs:element name="Client" type="xs:string" />
+              <xs:element name="Contract" type="xs:string" />
+              <xs:element name="OrderProcessType" />
+              <xs:element name="WorkCenter" />
+              <xs:element name="UserObj">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="HostName" type="xs:string" />
+                    <xs:element name="UserName" type="xs:string" />
+                    <xs:element name="Password" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BLEDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CRMSiteCode" type="xs:string" />
+              <xs:element name="CRMInterfaceName" type="xs:string" />
+              <xs:element name="DispositionType" type="xs:string" />
+              <xs:element name="CustomerRMA" type="xs:string" />
+              <xs:element name="WUR_SerialNo" type="xs:string" />
+              <xs:element name="CRMIncidentNo" type="xs:string" />
+              <xs:element name="OrderType" type="xs:string" />
+              <xs:element name="PartAvailabilityInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Product" type="xs:string" />
+                    <xs:element name="DispositionCode" type="xs:string" />
+                    <xs:element name="Quantity" type="xs:unsignedByte" />
+                    <xs:element name="Priority" type="xs:string" />
+                    <xs:element name="ShippingTerms" type="xs:string" />
+                    <xs:element name="OrderDeliveryDate" type="xs:string" />
+                    <xs:element name="Warranty" type="xs:string" />
+                    <xs:element name="CustomerInfo">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CustomerName" type="xs:string" />
+                          <xs:element name="ShippingAddress">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ContactName" type="xs:string" />
+                                <xs:element name="ContactEmail" type="xs:string" />
+                                <xs:element name="ContactPhone">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PhoneType" type="xs:string" />
+                                      <xs:element name="PhoneNo" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ContactAddress1" type="xs:string" />
+                                <xs:element name="ContactAddress2" type="xs:string" />
+                                <xs:element name="ContactAddress3" type="xs:string" />
+                                <xs:element name="ContactCity" type="xs:string" />
+                                <xs:element name="ContactState" type="xs:string" />
+                                <xs:element name="ContactPostalCode" type="xs:string" />
+                                <xs:element name="ContactCountry" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BillingAddress">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ContactName" type="xs:string" />
+                                <xs:element name="ContactEmail" type="xs:string" />
+                                <xs:element name="ContactPhone">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="PhoneType" type="xs:string" />
+                                      <xs:element name="PhoneNo" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ContactAddress1" type="xs:string" />
+                                <xs:element name="ContactAddress2" type="xs:string" />
+                                <xs:element name="ContactAddress3" type="xs:string" />
+                                <xs:element name="ContactCity" type="xs:string" />
+                                <xs:element name="ContactState" type="xs:string" />
+                                <xs:element name="ContactPostalCode" type="xs:string" />
+                                <xs:element name="ContactCountry" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="CreateOrderInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="OrderHeader">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CustomerTradingPartner" type="xs:string" />
+                          <xs:element name="OrderStatus" type="xs:string" />
+                          <xs:element name="CustomerInfo">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CustomerName" type="xs:string" />
+                                <xs:element name="ShippingAddress">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ContactName" type="xs:string" />
+                                      <xs:element name="ContactEmail" type="xs:string" />
+                                      <xs:element name="ContactPhone">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="PhoneType" type="xs:string" />
+                                            <xs:element name="PhoneNo" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="ContactAddress1" type="xs:string" />
+                                      <xs:element name="ContactAddress2" type="xs:string" />
+                                      <xs:element name="ContactAddress3" type="xs:string" />
+                                      <xs:element name="ContactCity" type="xs:string" />
+                                      <xs:element name="ContactState" type="xs:string" />
+                                      <xs:element name="ContactPostalCode" type="xs:string" />
+                                      <xs:element name="ContactCountry" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="BillingAddress">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ContactName" type="xs:string" />
+                                      <xs:element name="ContactEmail" type="xs:string" />
+                                      <xs:element name="ContactPhone">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="PhoneType" type="xs:string" />
+                                            <xs:element name="PhoneNo" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="ContactAddress1" type="xs:string" />
+                                      <xs:element name="ContactAddress2" type="xs:string" />
+                                      <xs:element name="ContactAddress3" type="xs:string" />
+                                      <xs:element name="ContactCity" type="xs:string" />
+                                      <xs:element name="ContactState" type="xs:string" />
+                                      <xs:element name="ContactPostalCode" type="xs:string" />
+                                      <xs:element name="ContactCountry" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="NOTE" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="OrderLineDetail">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Part_No" type="xs:string" />
+                          <xs:element name="Quantity" type="xs:unsignedByte" />
+                          <xs:element name="Condition" type="xs:string" />
+                          <xs:element name="Priority" type="xs:string" />
+                          <xs:element name="ShippingTerms" type="xs:string" />
+                          <xs:element name="OrderDeliveryDate" type="xs:string" />
+                          <xs:element name="Warranty" type="xs:string" />
+                          <xs:element name="UnitPrice" type="xs:string" />
+                          <xs:element name="Currency" type="xs:string" />
+                          <xs:element name="NOTE" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TransactionInformation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Messages">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Message" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Status" type="xs:string" />
+              <xs:element name="DistributedIdentifier" type="xs:string" />
+              <xs:element name="CreationTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
